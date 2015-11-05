@@ -107,7 +107,7 @@ module Google
         # @raise [Google::Apis::ServerError] An error occurred on the server and the request can be retried
         # @raise [Google::Apis::ClientError] The request is invalid and should not be retried without modification
         # @raise [Google::Apis::AuthorizationError] Authorization is required
-        def get_ga_data(ids, start_date, end_date, metrics, dimensions: nil, filters: nil, max_results: nil, output: nil, sampling_level: nil, segment: nil, sort: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
+        def get_ga_data(ids, start_date, end_date, metrics, dimensions = nil, filters = nil, max_results: nil, output: nil, sampling_level: nil, segment: nil, sort: nil, start_index: nil, fields: nil, quota_user: nil, user_ip: nil, options: nil, &block)
           path = 'data/ga'
           command =  make_simple_command(:get, path, options)
           command.response_representation = Google::Apis::AnalyticsV3::GaData::Representation
